@@ -21,9 +21,26 @@
 
     <script type="text/javascript">
       var drawing;
-      function createDrawing() {
-        drawing = new Drawing.SimpleGraph({layout: '3d', selection: true, numNodes: 50, graphLayout:{attraction: 5, repulsion: 0.5}, showStats: true, showInfo: true});
-      }
+      // function createDrawing() {
+      //   drawing = new Drawing.SimpleGraph({layout: '3d', selection: true, numNodes: 50, graphLayout:{attraction: 5, repulsion: 0.5}, showStats: true, showInfo: true});
+      // }
+      function threeStart() {
+        alert('1')
+                initThree();
+                alert('2')
+                initCamera();
+                alert('3')
+                initScene();
+                alert('4')
+                initLight();
+                alert('5')
+                initObject();
+                alert('6')
+                renderer.clear();
+                alert('7')
+                renderer.render(scene, camera);
+                alert('8')
+            }
     </script>
 
     <style type="text/css">
@@ -48,9 +65,19 @@
         right: 0;
         z-index: 10;
       }
+      div#canvas-frame {
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                height: 600px;
+                background-color: #EEEEEE;
+            }
     </style>
   </head>
-  <body onload="createDrawing()">
+  <body onload="threeStart();">
+    <div id="canvas-frame"><sdfs/div>
+</body>
+  <!-- <body onload="createDrawing()">
     <div id="options">
       <form>
         <p>
@@ -68,5 +95,5 @@
       Zoom: Press Key S + Left Mouse Button and Move<br />
       Drag: Press Key D + Left Mouse Button and Move
     </div>
-  </body>
+  </body> -->
 </html>
